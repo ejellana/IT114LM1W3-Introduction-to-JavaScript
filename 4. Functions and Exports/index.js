@@ -33,10 +33,11 @@ function greet(Emman) {
   console.log('Modified Array:', modifiedArray);
   
   // Todo 4.4 Import and call the 'add' method from mathUtils.js and display the value of the PI constant
-  const { add, PI } = require('./mathUtils'); // Adjust the path accordingly
+  const { add, PI } = require('./path-to-mathUtils');
   console.log('Sum:', add(3, 4));
   console.log('PI:', PI);
   
+
   // Todo 4.5 Import and call the 'isPalindrome' method from isPalindrome.js
   const isPalindrome = require('./isPalindrome');
   console.log('Is "level" a palindrome?', isPalindrome('level'));
