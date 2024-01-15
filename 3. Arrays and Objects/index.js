@@ -47,17 +47,26 @@ console.log(object)
 object.professor = 'Job Lipat'
 console.log(object.professor)
 
-// Todo 3.5 Declare and array of objects with information about the courses you are taking this term
-// Your code here
-
-// Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
-// Your code here
-
-// Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
-// Answer: 
-
-// Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
-// Your code here
-
-// Todo 3.7 Going back to your IT114L object, extract the course code and units using the spread operator
-// Your code here
+// Todo 3.5 Declare an array of objects with information about the courses you are taking this term
+const courses = [
+    { courseCode: 'IT114L', units: 3 },
+    { courseCode: 'CS120', units: 4 },
+    { courseCode: 'CS107', units: 3 }
+  ];
+  
+  // Todo 3.5 Calculate the total number of units you are taking this term using the array of objects.
+  const totalUnits = courses.reduce((sum, course) => sum + course.units, 0);
+  console.log("Total units:", totalUnits);
+  
+  // Checkpoint 3.2 What would be the equivalent of objects in Python? How would you compare them?
+  // Answer: In Python, the equivalent of objects is dictionaries, and they can be compared similarly based on their key-value pairs.
+  
+  // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
+  const num = [1, 2, 3, 4, 5];
+  const newArray = [...num, 6];
+  console.log("New array:", newArray);
+  
+  // Todo 3.7 Going back to your IT114L object, extract the course code and units using the destructuring assignment
+  const { courseCode, units } = courses.find(course => course.courseCode === 'IT114L');
+  console.log("Course Code:", courseCode, "Units:", units);
+  
